@@ -5,7 +5,7 @@
 !macro customInstall
   ; Ask the user if they want to register file associations
   MessageBox MB_YESNO|MB_ICONQUESTION \
-  "Do you want to associate Markdown files (.md, .markdown, .mmd, .mdown, .mdtext, .mdx) with MarkText Dual?" /SD IDNO IDNO SkipAssoc
+  "Do you want to associate Markdown files (.md, .markdown, .mmd, .mdown, .mdtext, .mdx) with MarkText?" /SD IDNO IDNO SkipAssoc
 
   ;— User clicked YES, perform the registry writes —
   WriteRegStr HKCU "Software\Classes\.md"       "" "MarkTextDual.Document"
@@ -17,7 +17,7 @@
   WriteRegStr HKCU "Software\Classes\.mdx"      "" "MarkTextDual.Document"
 
   WriteRegStr HKCU "Software\Classes\MarkTextDual.Document" \
-    "" "MarkText Dual Markdown Document"
+    "" "MarkText Markdown Document"
   WriteRegExpandStr HKCU "Software\Classes\MarkTextDual.Document\DefaultIcon" \
     "" "$INSTDIR\resources\icons\md.ico,0"
   WriteRegExpandStr HKCU "Software\Classes\MarkTextDual.Document\shell\open\command" \
