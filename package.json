@@ -1,9 +1,9 @@
 {
   "name": "marktext-monorepo",
-  "version": "0.20.0-dev",
-  "description": "MarkText monorepo root",
+  "version": "0.20.0-dual.1",
+  "description": "MarkText Dual monorepo — a MarkText fork with independent left and right sidebars",
   "private": true,
-  "homepage": "https://github.com/marktext/marktext",
+  "homepage": "https://github.com/LokiForge/marktext",
   "packageManager": "pnpm@10.33.4",
   "engines": {
     "node": ">=20.19.0",

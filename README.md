@@ -1,6 +1,6 @@
-<p align="center"><img src="docs/assets/logo-small.png" alt="MarkText" width="100" height="100"></p>
+<p align="center"><img src="docs/assets/logo-small.png" alt="MarkText Dual" width="100" height="100"></p>
 
-<h1 align="center">MarkText</h1>
+<h1 align="center">MarkText Dual</h1>
 
 <div align="center">
   <a href="https://twitter.com/intent/tweet?via=marktextme&url=https://github.com/marktext/marktext/&text=What%20do%20you%20want%20to%20say%20to%20app?&hashtags=happyMarkText">
@@ -8,10 +8,15 @@
   </a>
 </div>
 <div align="center">
-  <strong>:high_brightness: Next generation markdown editor :crescent_moon:</strong><br>
-  A simple and elegant open-source markdown editor that focused on speed and usability.<br>
-  <sub>Available for Linux, macOS and Windows.</sub>
+  <strong>MarkText with independent left and right sidebars</strong><br>
+  Keep files and open documents on one side while the document outline stays visible on the other.<br>
+  <sub>An unofficial fork of MarkText, available for Linux, macOS and Windows.</sub>
 </div>
+
+<br>
+
+> **MarkText Dual** is an unofficial fork of [MarkText](https://github.com/marktext/marktext).
+> The main addition is a second, independent sidebar so Files/Search/TOC panels can remain visible on both sides of the editor.
 
 <br>
 
@@ -21,12 +26,12 @@
     <img src="https://img.shields.io/github/license/marktext/marktext.svg" alt="LICENSE">
   </a>
   <!-- Downloads total -->
-  <a href="https://github.com/marktext/marktext/releases">
-    <img src="https://img.shields.io/github/downloads/marktext/marktext/total.svg" alt="total download">
+  <a href="https://github.com/LokiForge/marktext/releases">
+    <img src="https://img.shields.io/github/downloads/LokiForge/marktext/total.svg" alt="total download">
   </a>
   <!-- Downloads latest release -->
-  <a href="https://github.com/marktext/marktext/releases/latest">
-    <img src="https://img.shields.io/github/downloads/marktext/marktext/latest/total.svg" alt="latest download">
+  <a href="https://github.com/LokiForge/marktext/releases/latest">
+    <img src="https://img.shields.io/github/downloads/LokiForge/marktext/latest/total.svg" alt="latest download">
   </a>
   <!-- sponsors -->
   <a href="https://opencollective.com/marktext">
@@ -139,7 +144,7 @@ MarkText is an open-source Markdown editor powered by the support of its communi
 
 |               ![](https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/screenshots/v1.0.x/mac-pass-sm.png)               |               ![](https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/screenshots/v1.0.x/windows-pass-sm.png)               |              ![](https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/screenshots/v1.0.x/linux-pass-sm.png)              |
 | :-----------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: |
-| [![Download for macOS](https://img.shields.io/badge/macOS-Download-blue)](https://github.com/marktext/marktext/releases/latest) | [![Download for Windows](https://img.shields.io/badge/Windows-Download-blue)](https://github.com/marktext/marktext/releases/latest) | [![Download for Linux](https://img.shields.io/badge/Linux-Download-blue)](https://github.com/marktext/marktext/releases/latest) |
+| [![Download for macOS](https://img.shields.io/badge/macOS-Download-blue)](https://github.com/LokiForge/marktext/releases/latest) | [![Download for Windows](https://img.shields.io/badge/Windows-Download-blue)](https://github.com/LokiForge/marktext/releases/latest) | [![Download for Linux](https://img.shields.io/badge/Linux-Download-blue)](https://github.com/LokiForge/marktext/releases/latest) |
 
 Want to see new features of the latest version? Please refer to [CHANGELOG](https://marktext.me/docs/changelog).
 
@@ -147,7 +152,7 @@ Want to see new features of the latest version? Please refer to [CHANGELOG](http
 
 Requires macOS 11 (Big Sur) or later. Universal builds aren't published — pick the matching `arm64` or `x64` installer.
 
-You can either download the latest `marktext-mac-(arm64|x64)-%version%.dmg` from the [release page](https://github.com/marktext/marktext/releases/latest) or install MarkText using [**homebrew cask**](https://github.com/caskroom/homebrew-cask). To use Homebrew-Cask you just need to have [Homebrew](https://brew.sh/) installed.
+You can either download the latest `marktext-mac-(arm64|x64)-%version%.dmg` from the [release page](https://github.com/LokiForge/marktext/releases/latest) or install MarkText using [**homebrew cask**](https://github.com/caskroom/homebrew-cask). To use Homebrew-Cask you just need to have [Homebrew](https://brew.sh/) installed.
 
 ```bash
 brew install --cask mark-text
@@ -177,7 +182,7 @@ Please follow the [Linux installation instructions](https://marktext.me/docs/ins
 
 #### Other
 
-All binaries for Linux, macOS and Windows can be downloaded from the [release page](https://github.com/marktext/marktext/releases/latest). If a version is unavailable for your system, then please open an [issue](https://github.com/marktext/marktext/issues).
+All binaries for Linux, macOS and Windows can be downloaded from the [release page](https://github.com/LokiForge/marktext/releases/latest). If a version is unavailable for your system, then please open an [issue](https://github.com/marktext/marktext/issues).
 
 ## Development
 

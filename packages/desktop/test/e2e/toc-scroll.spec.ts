@@ -85,7 +85,7 @@ const expectHeadingAtTocGap = (page: Page, index: number): Promise<void> =>
 // Locate a TOC tree node label by its EXACT text. Exact matching avoids the
 // substring trap where "Heading Number 1" also matches "Heading Number 18".
 const tocLabel = (page: Page, text: string) =>
-  page.locator('.side-bar-toc').getByText(text, { exact: true })
+  page.locator('.side-bar .side-bar-toc').getByText(text, { exact: true })
 
 const showSidebar = async(app: ElectronApplication, page: Page): Promise<void> => {
   const visible = await page.evaluate(() => {
@@ -132,11 +132,11 @@ test.describe('TOC sidebar click scrolls the live editor', () => {
     // Open the sidebar and switch its right column to the ToC (el-tree).
     await showSidebar(app, page)
     await clickMenuById(app, 'tocMenuItem')
-    await page.waitForSelector('.side-bar-toc .el-tree', { state: 'visible', timeout: 10000 })
+    await page.waitForSelector('.side-bar .side-bar-toc .el-tree', { state: 'visible', timeout: 10000 })
     // The TOC is seeded from `editor.getTOC()` on mount / json-change. Wait
     // until every heading has rendered a tree node before clicking.
     await page.waitForFunction(
-      (count) => document.querySelectorAll('.side-bar-toc .el-tree-node__label').length >= count,
+      (count) => document.querySelectorAll('.side-bar .side-bar-toc .el-tree-node__label').length >= count,
       HEADING_COUNT,
       { timeout: 10000 }
     )

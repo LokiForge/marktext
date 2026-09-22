@@ -35,6 +35,8 @@
       <rename />
       <import-modal />
     </div>
+
+    <side-bar-right v-if="init" />
   </div>
 </template>
 
@@ -47,6 +49,7 @@ import Recent from '@/components/recent/index.vue'
 import EditorWithTabs from '@/components/editorWithTabs/index.vue'
 import TitleBar from '@/components/titleBar/index.vue'
 import SideBar from '@/components/sideBar/index.vue'
+import SideBarRight from '@/components/sideBarRight/index.vue'
 import AboutDialog from '@/components/about/index.vue'
 import CommandPalette from '@/components/commandPalette/index.vue'
 import ExportSettingDialog from '@/components/exportSettings/index.vue'

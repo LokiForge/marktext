@@ -29,7 +29,7 @@ const INITIAL_DOC = '# A\n\n## B\n\n### B1\n\n## C\n'
 const readTocTree = (page: Page): Promise<Array<{ label: string; depth: number }>> =>
   page.evaluate(() => {
     const nodes = Array.from(
-      document.querySelectorAll('.side-bar-toc .el-tree .el-tree-node')
+      document.querySelectorAll('.side-bar .side-bar-toc .el-tree .el-tree-node')
     ) as HTMLElement[]
     return nodes.map((node) => {
       const labelEl = node.querySelector(':scope > .el-tree-node__content .el-tree-node__label')
@@ -77,11 +77,11 @@ test.describe('TOC panel content + live update', () => {
     await ensureSidebarVisible(app, page)
     // Switch the sidebar right-column to the ToC (el-tree).
     await clickMenuById(app, 'tocMenuItem')
-    await page.waitForSelector('.side-bar-toc .el-tree', { state: 'visible', timeout: 10000 })
+    await page.waitForSelector('.side-bar .side-bar-toc .el-tree', { state: 'visible', timeout: 10000 })
     // The tree is seeded from `editor.getTOC()` on mount. Wait until every
     // initial heading has rendered a node before asserting.
     await page.waitForFunction(
-      () => document.querySelectorAll('.side-bar-toc .el-tree-node__label').length >= 4,
+      () => document.querySelectorAll('.side-bar .side-bar-toc .el-tree-node__label').length >= 4,
       null,
       { timeout: 10000 }
     )

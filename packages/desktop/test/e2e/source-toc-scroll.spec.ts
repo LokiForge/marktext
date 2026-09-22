@@ -50,9 +50,9 @@ test.describe('Source Code mode: TOC click scrolls to the heading at the top', (
     })
     if (!sbVisible) await clickMenuById(app, 'sideBarMenuItem')
     await clickMenuById(app, 'tocMenuItem')
-    await page.waitForSelector('.side-bar-toc .el-tree', { state: 'visible', timeout: 10000 })
+    await page.waitForSelector('.side-bar .side-bar-toc .el-tree', { state: 'visible', timeout: 10000 })
     await page.waitForFunction(
-      (c) => document.querySelectorAll('.side-bar-toc .el-tree-node__label').length >= c,
+      (c) => document.querySelectorAll('.side-bar .side-bar-toc .el-tree-node__label').length >= c,
       HEADING_COUNT,
       { timeout: 10000 }
     )
@@ -69,7 +69,7 @@ test.describe('Source Code mode: TOC click scrolls to the heading at the top', (
     })
     await expect.poll(() => srcScrollTop(page)).toBe(0)
 
-    await page.locator('.side-bar-toc').getByText('Heading Number 18', { exact: true }).click()
+    await page.locator('.side-bar .side-bar-toc').getByText('Heading Number 18', { exact: true }).click()
 
     // animated scroll down
     await expect.poll(() => srcScrollTop(page), { timeout: 8000 }).toBeGreaterThan(0)
@@ -83,7 +83,7 @@ test.describe('Source Code mode: TOC click scrolls to the heading at the top', (
   test('clicking an earlier heading scrolls back up to it at the top', async() => {
     const fromTop = await srcScrollTop(page)
     expect(fromTop).toBeGreaterThan(0)
-    await page.locator('.side-bar-toc').getByText('Heading Number 3', { exact: true }).click()
+    await page.locator('.side-bar .side-bar-toc').getByText('Heading Number 3', { exact: true }).click()
     await expect.poll(() => srcScrollTop(page), { timeout: 8000 }).toBeLessThan(fromTop)
     await expect
       .poll(() => headingLineTopInViewport(page, 'Heading Number 3'), { timeout: 8000 })
