@@ -2,9 +2,12 @@ name: Release MarkText
 
 on:
   push:
-    # Broad trigger so the validate job can reject malformed v-tags
-    # (e.g. `vbad.tag`) instead of them silently not triggering anything.
+    # Tag pushes are the normal release path. Version-named branches are also
+    # supported so maintainers can trigger the same pipeline without manually
+    # creating a tag first; the release job creates the matching tag.
     tags:
+      - 'v*'
+    branches:
       - 'v*'
 
 concurrency:
@@ -213,6 +216,8 @@ jobs:
           draft: true
           prerelease: ${{ contains(github.ref_name, '-') }}
           generate_release_notes: true
+          tag_name: ${{ github.ref_name }}
+          target_commitish: ${{ github.sha }}
           name: ${{ github.ref_name }}
           body_path: release_body.md
           fail_on_unmatched_files: true
