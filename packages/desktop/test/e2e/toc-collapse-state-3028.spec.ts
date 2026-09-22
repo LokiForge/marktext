@@ -19,7 +19,7 @@ const INITIAL_DOC = '# A\n\n## B\n\n### B1\n\n## C\n'
 const readVisibleTocLabels = (page: Page): Promise<string[]> =>
   page.evaluate(() => {
     const nodes = Array.from(
-      document.querySelectorAll('.side-bar-toc .el-tree .el-tree-node')
+      document.querySelectorAll('.side-bar .side-bar-toc .el-tree .el-tree-node')
     ) as HTMLElement[]
     return nodes
       .filter((n) => n.offsetParent !== null)
@@ -32,7 +32,7 @@ const readVisibleTocLabels = (page: Page): Promise<string[]> =>
 const collapseNode = (page: Page, label: string): Promise<void> =>
   page.evaluate((lbl) => {
     const nodes = Array.from(
-      document.querySelectorAll('.side-bar-toc .el-tree .el-tree-node')
+      document.querySelectorAll('.side-bar .side-bar-toc .el-tree .el-tree-node')
     ) as HTMLElement[]
     const node = nodes.find((n) => {
       const l = n.querySelector(':scope > .el-tree-node__content .el-tree-node__label')
@@ -75,9 +75,9 @@ test.describe('TOC collapse state survives edits (#3028)', () => {
     await waitForEditor(page)
     await ensureSidebarVisible(app, page)
     await clickMenuById(app, 'tocMenuItem')
-    await page.waitForSelector('.side-bar-toc .el-tree', { state: 'visible', timeout: 10000 })
+    await page.waitForSelector('.side-bar .side-bar-toc .el-tree', { state: 'visible', timeout: 10000 })
     await page.waitForFunction(
-      () => document.querySelectorAll('.side-bar-toc .el-tree-node__label').length >= 4,
+      () => document.querySelectorAll('.side-bar .side-bar-toc .el-tree-node__label').length >= 4,
       null,
       { timeout: 10000 }
     )
