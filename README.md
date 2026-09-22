@@ -1,6 +1,6 @@
-<p align="center"><img src="docs/assets/logo-small.png" alt="MarkText Dual" width="100" height="100"></p>
+<p align="center"><img src="docs/assets/logo-small.png" alt="MarkText" width="100" height="100"></p>
 
-<h1 align="center">MarkText Dual</h1>
+<h1 align="center">MarkText — Dual Sidebar Fork</h1>
 
 <div align="center">
   <a href="https://twitter.com/intent/tweet?via=marktextme&url=https://github.com/marktext/marktext/&text=What%20do%20you%20want%20to%20say%20to%20app?&hashtags=happyMarkText">
@@ -15,7 +15,7 @@
 
 <br>
 
-> **MarkText Dual** is an unofficial fork of [MarkText](https://github.com/marktext/marktext).
+> This repository is an unofficial fork of [MarkText](https://github.com/marktext/marktext).
 > The main addition is a second, independent sidebar so Files/Search/TOC panels can remain visible on both sides of the editor.
 
 <br>

@@ -1,5 +1,5 @@
 appId: com.github.lokiforge.marktextdual
-productName: MarkText Dual
+productName: marktext
 directories:
   buildResources: build
   output: ../../dist
@@ -153,7 +153,7 @@ dmg:
 linux:
   artifactName: 'marktext-dual-linux-${version}.${ext}'
   executableName: 'marktext-dual'
-  description: 'A MarkText fork with independent left and right sidebars.'
+  description: 'A simple and elegant open-source markdown editor with an independent right sidebar.'
   maintainer: 'MarkText Contributors'
   category: 'Office;TextEditor;Utility'
   mimeTypes:
