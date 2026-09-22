@@ -1,7 +1,7 @@
 {
   "name": "marktext",
   "version": "0.20.0-dev",
-  "description": "MarkText",
+  "description": "MarkText Dual — a MarkText fork with independent left and right sidebars",
   "main": "./out/main/index.js",
   "author": {
     "name": "Jocs",
@@ -25,10 +25,10 @@
       "url": "https://github.com/Tkaixiang"
     }
   ],
-  "homepage": "https://github.com/marktext/marktext",
+  "homepage": "https://github.com/LokiForge/marktext",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marktext/marktext.git"
+    "url": "git+https://github.com/LokiForge/marktext.git"
   },
   "scripts": {
     "minify-locales": "tsx ../../scripts/minify-locales.ts",
