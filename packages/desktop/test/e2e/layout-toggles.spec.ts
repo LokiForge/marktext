@@ -122,20 +122,24 @@ test.describe('Layout panel toggles', () => {
       { timeout: 5000 }
     )
 
-    const { editorWidth, sideBarWidth, viewportWidth } = await page.evaluate(() => {
+    const { editorWidth, sideBarWidth, rightSideBarWidth, viewportWidth } = await page.evaluate(() => {
       const editor = document.querySelector('.editor-with-tabs') as HTMLElement | null
       const sb = document.querySelector('.side-bar') as HTMLElement | null
+      const rightSb = document.querySelector('.side-bar-right') as HTMLElement | null
       return {
         editorWidth: editor ? editor.getBoundingClientRect().width : 0,
         sideBarWidth: sb ? sb.getBoundingClientRect().width : 0,
+        rightSideBarWidth: rightSb ? rightSb.getBoundingClientRect().width : 0,
         viewportWidth: window.innerWidth
       }
     })
-    // Sidebar is the 45px icon strip (+1px border). The editor must consume
-    // the remaining viewport width — before the fix it was capped by the
-    // store's `sideBarWidth` (clamped to ≥220), leaving a 175+ px gap to the
-    // right of the editor.
+    // The left sidebar is the 45px icon strip (+1px border). With the dual-
+    // sidebar layout, the editor must consume the remaining viewport width
+    // after subtracting BOTH sidebars.
     expect(sideBarWidth).toBeLessThanOrEqual(50)
-    expect(Math.abs(editorWidth - (viewportWidth - sideBarWidth))).toBeLessThanOrEqual(1)
+    expect(rightSideBarWidth).toBeGreaterThanOrEqual(45)
+    expect(
+      Math.abs(editorWidth - (viewportWidth - sideBarWidth - rightSideBarWidth))
+    ).toBeLessThanOrEqual(1)
   })
 })
