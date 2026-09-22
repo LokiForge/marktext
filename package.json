@@ -3,7 +3,7 @@
   "version": "0.20.0-dual.1",
   "description": "MarkText monorepo with an independent right-sidebar enhancement",
   "private": true,
-  "homepage": "https://github.com/LokiForge/marktext",
+  "homepage": "https://github.com/LokiForge/marktext-dual-sidebar",
   "packageManager": "pnpm@10.33.4",
   "engines": {
     "node": ">=20.19.0",
