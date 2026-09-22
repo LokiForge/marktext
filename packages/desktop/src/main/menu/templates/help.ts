@@ -41,7 +41,7 @@ export default function(): MenuItemConstructorOptions {
     {
       label: t('menu.help.changelog'),
       click() {
-        shell.openExternal('https://github.com/LokiForge/marktext/releases')
+        shell.openExternal('https://github.com/LokiForge/marktext-dual-sidebar/releases')
       }
     },
     {
@@ -77,7 +77,7 @@ export default function(): MenuItemConstructorOptions {
     {
       label: t('menu.help.viewSource'),
       click() {
-        shell.openExternal('https://github.com/LokiForge/marktext')
+        shell.openExternal('https://github.com/LokiForge/marktext-dual-sidebar')
       }
     },
     {
@@ -86,7 +86,7 @@ export default function(): MenuItemConstructorOptions {
     {
       label: t('menu.help.license'),
       click() {
-        shell.openExternal('https://github.com/LokiForge/marktext/blob/develop/LICENSE')
+        shell.openExternal('https://github.com/LokiForge/marktext-dual-sidebar/blob/develop/LICENSE')
       }
     }
   ]
