@@ -25,10 +25,10 @@
       "url": "https://github.com/Tkaixiang"
     }
   ],
-  "homepage": "https://github.com/LokiForge/marktext",
+  "homepage": "https://github.com/LokiForge/marktext-dual-sidebar",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LokiForge/marktext.git"
+    "url": "git+https://github.com/LokiForge/marktext-dual-sidebar.git"
   },
   "scripts": {
     "minify-locales": "tsx ../../scripts/minify-locales.ts",
